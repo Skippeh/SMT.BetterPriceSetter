@@ -1,0 +1,1 @@
+﻿Note: The files in this directory have had their method IL contents stripped. They're included in the repo for convenience sake.
