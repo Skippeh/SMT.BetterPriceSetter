@@ -9,3 +9,7 @@ By default the setting is set to double the market price. It can be changed by e
 ## How to install
 1. If you don't have BepInEx installed already [download BepInEx](https://github.com/BepInEx/BepInEx/releases) and extract it to the game folder.
 2. Download the mod from the [releases page](https://github.com/Skippeh/SMT.BetterPriceSetter/releases) and extract it to the `BepInEx/plugins` folder. Create the folder if it doesn't exist.
+
+## How to build
+1. Copy `DevVars.targets.example` to `DevVars.targets` and change the `PluginFolder` to your game's plugin folder. This copies the dll to the game's plugin folder after a successful build.
+2. Build the project normally, should Just Work™.

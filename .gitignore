@@ -395,3 +395,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# User specific development variables
+DevVars.targets

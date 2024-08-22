@@ -45,14 +45,11 @@
     <!--<CopyToPluginFolder Include="$(TargetDir)\BetterPriceSetter.pdb" />-->
   </ItemGroup>
   
-  <!-- Plugin folders -->
-  <ItemGroup>
-    <PluginFolder Include="G:\SteamLibrary\steamapps\common\Supermarket Together\BepInEx\plugins" />
-  </ItemGroup>
-  
   <!-- Target for copying files to plugin folders -->
   <Target Name="CopyToPluginFolder" AfterTargets="PostBuildEvent">
     <Message Importance="high" Text="Copying files to plugin folders" />
     <Copy SourceFiles="@(CopyToPluginFolder)" DestinationFolder="@(PluginFolder)" />
   </Target>
+
+  <Import Project="$(SolutionDir)DevVars.targets" />
 </Project>
