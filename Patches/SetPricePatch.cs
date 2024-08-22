@@ -18,7 +18,7 @@ public class SetPricePatch
         if (Input.GetMouseButtonDown(2)) // If middle mouse button was just pressed
         {
             float marketPrice = ProductUtility.GetMarketPrice(productID);
-            float price = marketPrice * Plugin.Config.MarketPriceMultiplier.Value;
+            float price = marketPrice * Plugin.PluginConfig.MarketPriceMultiplier.Value;
             
             ProductUtility.SetPrice(productID, price);
 

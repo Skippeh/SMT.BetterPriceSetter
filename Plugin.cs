@@ -12,14 +12,14 @@ namespace BetterPriceSetter;
 public class Plugin : BaseUnityPlugin
 {
     internal new static ManualLogSource Logger = null!;
-    internal static PluginConfig Config = null!;
+    internal static PluginConfig PluginConfig = null!;
 
     private static Harmony harmony = null!;
     
     private void Awake()
     {
         Logger = base.Logger;
-        Config = LoadConfig();
+        PluginConfig = LoadConfig();
         harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID);
         
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
@@ -32,7 +32,7 @@ public class Plugin : BaseUnityPlugin
 
     private PluginConfig LoadConfig()
     {
-        var marketPriceMultiplier = base.Config.Bind(
+        var marketPriceMultiplier = Config.Bind(
             "General",
             "MarketPriceMultiplier",
             2.0f,
